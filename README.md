@@ -21,11 +21,11 @@ How to use:
    code:
    <code>
    <script type="text/javascript">
-     Jsd({
-       identifier: "js-search", //<input type="text" name="countries" id="js-search">
-       fetch: "/json.php", //path for your json response
-       param: "q", //search parameter ex: https://google.com/search?q=
-     });
+     Jsd({ <br/>
+       identifier: "js-search", //<input type="text" name="countries" id="js-search"><br/>
+       fetch: "/json.php", //path for your json response<br/>
+       param: "q", //search parameter ex: https://google.com/search?q=<br/>
+     });<br/>
    </script>
    </code>
 
