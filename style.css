@@ -1,6 +1,7 @@
 .jsd-search-container{
     position: absolute;
     width: auto;
+    display: none;
 }
 .jsd-search-container ul{
     position: relative;
@@ -12,6 +13,7 @@
 }
 .jsd-search-container ul li{
     padding: 5px;
+    cursor: pointer;
 }
 .jsd-search-container ul li:not(:first-child){
     border-top: rgb(238, 238, 238) solid 1px;
