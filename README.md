@@ -13,15 +13,15 @@ How to use:
 
 1. Import the "js-search-dropdown.js" file bottom of your page before closing the BODY tag.
    ex:
-   <code>
+   <pre>
    <script type="text/javascript" src="js-search-dropdown.js"></script>
-   </code>
+   </pre>
 
 2. use the below example code after the import.
    code:
    <pre>
    <script type="text/javascript">
-     Jsd({ <br />
+     Jsd({ 
        identifier: "js-search", //<input type="text" name="countries" id="js-search">   
        fetch: "/json.php", //path for your json response    
        param: "q", //search parameter ex: https://google.com/search?q=  
