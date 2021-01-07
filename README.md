@@ -1,7 +1,7 @@
 This Project is Basic and simple use only
 
 Prerequisite :
-1) jQuery 3 or greater
+1. jQuery 3 or greater
 
 How does this library works:
 
@@ -10,10 +10,14 @@ for quick startup of a basic search box (you can control the number of rows etc.
 
 How to use:
 
-1) Import the "js-search-dropdown.js" file bottom of your page before closing the BODY tag.
-    ex: <script type="text/javascript" src="js-search-dropdown.js"></script>
-2) use the below example code after the import.
+1. Import the "js-search-dropdown.js" file bottom of your page before closing the BODY tag.
+    ex: 
+    
+    <script type="text/javascript" src="js-search-dropdown.js"></script>
+
+2. use the below example code after the import.
     code:
+
     <script type="text/javascript">
       Jsd({
         identifier: "js-search", //<input type="text" name="countries" id="js-search">
@@ -33,4 +37,4 @@ How the json response should be formatted:
         {"value":5,"title":"Sri Lanka"}
     ]
 
-    Thank you...
+
