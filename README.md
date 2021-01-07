@@ -19,7 +19,7 @@ How to use:
 
 2. use the below example code after the import.
    code:
-   <code>
+   <pre>
    <script type="text/javascript">
      Jsd({ <br />
        identifier: "js-search", //<input type="text" name="countries" id="js-search">   
@@ -27,7 +27,7 @@ How to use:
        param: "q", //search parameter ex: https://google.com/search?q=  
      });    
    </script>
-   </code>
+   </pre>
 
 How the json response should be formatted:
 
