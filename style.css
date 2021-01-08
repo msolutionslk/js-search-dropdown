@@ -2,6 +2,7 @@
     position: absolute;
     width: auto;
     display: none;
+    background-color: #fff;
 }
 .jsd-search-container ul{
     position: relative;

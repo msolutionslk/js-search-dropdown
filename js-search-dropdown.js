@@ -13,6 +13,15 @@ function Jsd(config) {
   let totalEntries = 0;
   let oldSelected = -1;
   /**
+   * prevent while pressing enter avoid form submit
+   */
+  $(window).keydown(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        return false;
+      }
+    })
+  /**
    * unset the name value from the text field
    */
   $("#" + identifier).removeAttr("name");
