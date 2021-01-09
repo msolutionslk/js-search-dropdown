@@ -12,15 +12,16 @@ function Jsd(config) {
   let currentlySelected = -1;
   let totalEntries = 0;
   let oldSelected = -1;
+  let closeSearch;
   /**
    * prevent while pressing enter avoid form submit
    */
-  $(window).keydown(function(event){
-      if(event.keyCode == 13) {
-        event.preventDefault();
-        return false;
-      }
-    })
+  $(window).keydown(function (event) {
+    if (event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
   /**
    * unset the name value from the text field
    */
@@ -107,11 +108,11 @@ function Jsd(config) {
               });
             $(liElement).click(function () {
               const id = $(this).attr("data-id");
-
               $("#" + identifier + "-hidden")
                 .prop("name", identifierName)
                 .val(id);
-              $("#" + identifier + "-search").hide();
+              const html = $(this).html();
+              identify.val(html);
             });
           });
           totalEntries = ul.childNodes.length - 1;
@@ -120,7 +121,10 @@ function Jsd(config) {
       startExecute = setTimeout(runFetch, 1000);
     })
     .blur(function () {
-      $("#" + identifier + "-search").hide();
+      closeSearch = setTimeout(function () {
+        $("#" + identifier + "-search").hide();
+        clearTimeout(closeSearch);
+      }, 100);
     });
 
   /**
@@ -157,7 +161,10 @@ function Jsd(config) {
         const html = selectUL[inx].innerHTML;
         const value = $(selectUL[inx]).attr("data-id");
         identify.val(html);
-        $("#" + identifier + "-hidden").val(value);
+
+        $("#" + identifier + "-hidden")
+          .prop("name", identifierName)
+          .val(value);
         $("#" + identifier + "-search").hide();
       }
     }
