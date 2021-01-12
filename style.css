@@ -3,6 +3,7 @@
     width: auto;
     display: none;
     background-color: #fff;
+    z-index: 2;
 }
 .jsd-search-container ul{
     position: relative;
