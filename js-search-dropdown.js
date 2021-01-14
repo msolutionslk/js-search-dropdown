@@ -110,7 +110,7 @@ function Jsd(config) {
               const id = $(this).attr("data-id");
               $("#" + identifier + "-hidden")
                 .prop("name", identifierName)
-                .val(id);
+                .val(id).trigger('change');
               const html = $(this).html();
               identify.val(html);
             });
@@ -164,7 +164,7 @@ function Jsd(config) {
 
         $("#" + identifier + "-hidden")
           .prop("name", identifierName)
-          .val(value);
+          .val(value).trigger('change');
         $("#" + identifier + "-search").hide();
       }
     }
